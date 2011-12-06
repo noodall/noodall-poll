@@ -1,8 +1,9 @@
 PATH
   remote: .
   specs:
-    noodall_poll (0.0.1)
-      rails (~> 3.1.1)
+    noodall-poll (0.0.1)
+      noodall-ui
+      rails (~> 3.1.0)
 
 GEM
   remote: http://gems.github.com/
@@ -192,5 +193,5 @@ DEPENDENCIES
   jquery-rails
   launchy
   mm-versionable (= 0.2.5)
+  noodall-poll!
   noodall-ui
-  noodall_poll!

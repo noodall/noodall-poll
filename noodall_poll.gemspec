@@ -5,7 +5,7 @@ require "noodall_poll/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "noodall_poll"
+  s.name        = "noodall-poll"
   s.version     = NoodallPoll::VERSION
   s.authors     = ["Rob Nichols"]
   s.email       = ["hello@wearebeef.co.uk"]
