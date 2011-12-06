@@ -1,3 +1,7 @@
-Noodall::Node.slots :main, :wide, :small
-Noodall::Node.set_collection_name 'nodes'
-
+# Add your Noodall:Node slots here
+#
+#   Noodall::Node.slot :<slot name>, <component name>
+#
+# For example:
+#
+Noodall::Node.slot :small, UserPoll

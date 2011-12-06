@@ -3,12 +3,18 @@ class User
   include Canable::Cans
 
   key :email, String
-  key :name, String
+  key :full_name, String
   key :groups, Array
-  key :password, String
-  key :password_confirmation, String
+
+  cattr_accessor :editor_groups
 
   def admin?
     groups.include?('website administrator')
   end
+
+  def editor?
+    return true if self.class.editor_groups.blank?
+    admin? or (self.class.editor_groups & groups).size > 0
+  end
+
 end

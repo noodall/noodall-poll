@@ -1,0 +1,6 @@
+development:
+  database: noodall_poll_development
+test:
+  database: noodall_poll_test
+production:
+  database: noodall_poll_production

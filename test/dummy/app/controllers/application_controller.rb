@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery
   @@current_user = User.find_or_create_by_full_name("Demo User")
 
   def self.current_user=(user)
@@ -23,4 +22,5 @@ class ApplicationController < ActionController::Base
   def anybody_signed_in?
     true
   end
+  protect_from_forgery
 end

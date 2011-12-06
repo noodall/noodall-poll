@@ -3,8 +3,6 @@ class UserPoll < Noodall::Component
 
   has_one :poll, :class => NoodallPoll::Poll
 
-  allowed_positions :wide
-
   module ClassMethods
     def poll_options
       lists = NoodallPoll::Poll.all(:fields => [:id, :name], :order => 'name ASC')
