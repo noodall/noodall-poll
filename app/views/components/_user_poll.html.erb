@@ -1,6 +1,4 @@
-<% div_id = "display_poll_#{component.poll_id}" %>
-<div class="poll">
-  <div id="<%= div_id %>"</div>
+<div id="<%= slot_code %>" class="component poll <%= 'double' if expand %> <%= additional_classes %>">
+<%= content_tag :iframe, '', src: noodall_poll_poll_path(component.poll_id), class: 'poll' %>
 </div>
 
-<%= show_poll_at(component.poll_id, "##{div_id}") %>

@@ -9,7 +9,7 @@ require "sprockets/railtie"
 require "rails/test_unit/railtie"
 
 Bundler.require
-require "noodall_poll"
+require "noodall-poll"
 
 module Dummy
   class Application < Rails::Application

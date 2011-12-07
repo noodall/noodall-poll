@@ -9,25 +9,3 @@
     <%= submit_tag(@poll.button_label, :id => 'poll_response_button') %>
   <% end %>
 </div>
-
-<%= javascript_tag do %>
-function submitToRemote(form, remote_url, output) {
-
-  jQuery(form).submit( function(event) {
-    event.preventDefault();
-    $.ajax({
-        url: remote_url,
-        type: 'post',
-        data: $(form).serialize(),
-        success: function(data) {
-                   $(output).replaceWith(data);
-                 }
-    });
-  });
-};
-
-submitToRemote(
-  '#edit_noodall_poll_poll_<%= @poll.id -%>',
-  '/noodall_poll/polls/<%= @poll.id -%>',
-  '#poll_reponse_<%= @poll.id -%>');
-<% end %>
