@@ -1,5 +1,5 @@
 <div class="poll_response" id="poll_reponse_<%= @poll.id -%>">
-  <%= form_for(@poll, :remote => true) do |form| %>
+  <%= form_for(@poll) do |form| %>
     <p><%= @poll.question %></p>
     <ul>
     <% for response_option in @poll.response_options %>
