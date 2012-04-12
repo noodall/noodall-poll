@@ -43,6 +43,12 @@ module NoodallPoll
         redirect_to noodall_poll_admin_polls_path
       end
 
+      def reset
+        get_poll
+        @poll.responses.delete_all
+        redirect_to noodall_poll_admin_polls_path
+      end
+
       def new_response_option_form_element
         if request.xhr?
           render :partial => 'new_response_option_form'

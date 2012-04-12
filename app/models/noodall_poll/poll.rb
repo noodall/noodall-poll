@@ -9,6 +9,7 @@ module NoodallPoll
     timestamps!
 
     many :response_options, :class => NoodallPoll::ResponseOption
+    many :responses, :class => NoodallPoll::PollResponse
 
     validates_presence_of(:name, :question)
 
