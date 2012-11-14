@@ -10,7 +10,9 @@ module NoodallPoll
 
     def show
       get_poll
-      if params[:show_poll_form] and params[:show_poll_form] == 'yes'
+      if !@poll
+        render :partial => 'no_poll'
+      elsif params[:show_poll_form] and params[:show_poll_form] == 'yes'
         render :partial => 'form'
       elsif params[:show_poll_form] and params[:show_poll_form] == 'no'
         render :partial => 'show'
